@@ -27,4 +27,5 @@ git commit -m "Dump semanal : "$dump
 echo "GIT PUSH"
 git push origin master
 
+echo "Removendo Dump"
 rm $dump
