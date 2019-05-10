@@ -13,7 +13,7 @@ services:
         ports:
                 - 5432:5432
         environment:
-                POSTGRES_PASSWORD: "1234"
+                POSTGRES_PASSWORD: "senha"
         volumes:
                 - /home/centos/docker-compose/PostgreSQL:/var/lib/postgresql/data
   pgadmin:
@@ -21,8 +21,8 @@ services:
         container_name: pgadmin 
         restart: always
         environment:
-                PGADMIN_DEFAULT_EMAIL: "adailton.silva10@live.com"
-                PGADMIN_DEFAULT_PASSWORD: "1234"
+                PGADMIN_DEFAULT_EMAIL: "email"
+                PGADMIN_DEFAULT_PASSWORD: "senha"
         ports:
                 - 80:80
         depends_on:
