@@ -1,11 +1,15 @@
 version: '3.4'
 services:
   jenkins:
-        image: jenkins/jenkins
+        image: jenkinsci/blueocean
         container_name: jenkins
         restart: always
+        user: root
         ports:
                 - 8080:8080
+        volumes:
+                - ./jenkins-data:/var/jenkins_home
+                - /var/run/docker.sock:/var/run/docker.sock
   db:
         image: postgres
         restart: always
